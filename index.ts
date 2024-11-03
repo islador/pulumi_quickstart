@@ -3,7 +3,8 @@ import * as gcp from "@pulumi/gcp";
 
 // Create a GCP resource (Storage Bucket)
 const bucket = new gcp.storage.Bucket("my-bucket", {
-    location: "US"
+    location: "US",
+    uniformBucketLevelAccess: true,
 });
 
 // Export the DNS name of the bucket
